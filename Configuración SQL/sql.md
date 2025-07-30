@@ -1,4 +1,6 @@
-# Creando Bases de datos.
+# Configuración SQL y creación de tablas en MySQL.
+
+## Creando Bases de datos.
 ```
 CREATE DATABASE migajas_amor;
 ```
