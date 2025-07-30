@@ -9,7 +9,7 @@ CREATE DATABASE migajas_amor;
 USE migajas_amor;
 ```
 ## Se crean las tablas dentro de la base de datos.
-### Estas tablas son del control de Autenticación y Autorización.
+Estas tablas son del control de Autenticación y Autorización.
 ```
 CREATE TABLE IF NOT EXISTS Usuarios (
     Id INT AUTO_INCREMENT NOT NULL,
