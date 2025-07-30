@@ -2,6 +2,10 @@
 ```
 CREATE DATABASE migajas_amor;
 ```
+## Se indica que se usará la Base de Datos creada.
+```
+USE migajas_amor;
+```
 ```
 USE migajas_amor;
 CREATE TABLE IF NOT EXISTS Usuarios (
