@@ -11,13 +11,14 @@ CREATE TABLE IF NOT EXISTS Usuarios (
     PRIMARY KEY (Id)
 );
 ```
-
+```
 CREATE TABLE IF NOT EXISTS Roles (
     Id INT AUTO_INCREMENT NOT NULL,
     Nombre VARCHAR(30) NOT NULL,
     PRIMARY KEY (Id)
 );
-
+```
+```
 CREATE TABLE IF NOT EXISTS RolesAsignados (
     Id INT AUTO_INCREMENT NOT NULL,
     UsuarioId INT NOT NULL,
@@ -26,3 +27,4 @@ CREATE TABLE IF NOT EXISTS RolesAsignados (
     FOREIGN KEY (UsuarioId) REFERENCES Usuarios(Id),
     FOREIGN KEY (RolId) REFERENCES Roles(Id)
 );
+```
