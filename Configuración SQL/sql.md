@@ -1,14 +1,14 @@
 # Configuración y creación de tablas de MySQL.
 
-## Creando Bases de datos.
+## 1. Creando Bases de datos.
 ```
 CREATE DATABASE migajas_amor;
 ```
-## Se indica que se usará la Base de Datos creada.
+## 2. Se indica que se usará la Base de Datos creada.
 ```
 USE migajas_amor;
 ```
-## Se crean las tablas dentro de la base de datos.
+## 3. Se crean las tablas dentro de la base de datos.
 Estas tablas son del control de Autenticación y Autorización.
 ```
 CREATE TABLE IF NOT EXISTS Usuarios (
