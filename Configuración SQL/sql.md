@@ -1,4 +1,4 @@
-# Configuración SQL y creación de tablas en MySQL.
+# Configuración y creación de tablas de MySQL.
 
 ## Creando Bases de datos.
 ```
