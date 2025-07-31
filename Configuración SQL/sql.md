@@ -38,3 +38,4 @@ Lo cual se puede hacer a través de **Notepadd++**
 ```
 insert into Usuarios(Login,Password) values('usuario','contraseña');
 ```
+<img width="620" height="431" alt="image" src="https://github.com/user-attachments/assets/f88ecbbb-2535-44ba-8410-83ecab5617de" />
