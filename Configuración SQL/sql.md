@@ -51,8 +51,7 @@ insert into roles(Nombre) values('Empleado');
 ```
 ## 6. Definiendo a cada usuario un rol.
 Al usuario número uno, se le asigna el rol de Administrado (rol 1.)
+Se debe realizar el mismo proceso para agregar a otros usuario o incluso el mismo otro rol diferente.
 ```
 INSERT INTO RolesAsignados (UsuarioId, RolId) VALUES (1, 1);
-```
-```
 ```
