@@ -31,3 +31,9 @@ CREATE TABLE IF NOT EXISTS RolesAsignados (
     FOREIGN KEY (RolId) REFERENCES Roles(Id)
 );
 ```
+## 4. Insertando usuarios a la tabla Usuarios.
+Realizar los cambios correspondientes.
+La contraseña debe ser con el algoritmo de hash criptográfico **SHA-256**.
+```
+insert into Usuarios(Login,Password) values('usuario','contraseña');
+```
