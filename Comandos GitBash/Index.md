@@ -1,4 +1,4 @@
-# Comando generales de GitBash.
+# Comandos generales de GitBash.
 
 ## Agregar a Staging:
 ```
