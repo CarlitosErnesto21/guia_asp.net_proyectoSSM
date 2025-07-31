@@ -29,3 +29,20 @@ Se le agrega la SSH despues de **clone**.
 ```
 git clone
 ```
+## Crear un branch:
+```
+git branch NombreBranch
+```
+## Cambiar de branch:
+```
+git checkout NombreBranch
+```
+## Hacer merge:
+Normalmente el nombre del branch es **main**.
+```
+git merge NombreBranch
+```
+## Eliminar branch:
+```
+git branch -D NombreBranch
+```
