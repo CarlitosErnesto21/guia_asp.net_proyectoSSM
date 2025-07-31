@@ -31,18 +31,6 @@ CREATE TABLE IF NOT EXISTS RolesAsignados (
     FOREIGN KEY (RolId) REFERENCES Roles(Id)
 );
 ```
-
-**Esta tabla se creó después**
-```
-CREATE TABLE productos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(100) NOT NULL,
-    descripcion TEXT NOT NULL,
-    precio DECIMAL(10,2) NOT NULL,
-    stock INT NOT NULL,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
 ## 4. Insertando usuarios a la tabla Usuarios.
 Realizar los cambios correspondientes.
 La contraseña debe ser con el algoritmo de hash criptográfico **SHA-256**.
@@ -67,7 +55,18 @@ Se debe realizar el mismo proceso para agregar a otros usuario o incluso el mism
 ```
 INSERT INTO RolesAsignados (UsuarioId, RolId) VALUES (1, 1);
 ```
-## 7. Insertando registros a la tabla Productos.
+## 7. Se creó una nueva tabla Productos.**
+```
+CREATE TABLE productos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+## 8. Insertando registros a la tabla Productos.
 ```
 INSERT INTO productos (nombre, descripcion, precio, stock)
 VALUES
