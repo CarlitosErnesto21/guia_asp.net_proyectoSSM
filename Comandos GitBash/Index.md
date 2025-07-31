@@ -42,7 +42,6 @@ git branch NombreBranch
 git checkout NombreBranch
 ```
 ## Hacer merge:
-Normalmente el nombre del branch es **main**.
 ```
 git merge NombreBranch
 ```
