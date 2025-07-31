@@ -31,3 +31,6 @@ Rango: 0.01 y 9999.99
 [Range(0.01, 9999.99)] //línea agregada
 public decimal Precio { get; set; }
 ```
+# Es indispensable personalizar el formato regional en la computadora/laptop.
+
+<img width="528" height="758" alt="image" src="https://github.com/user-attachments/assets/ccce24e8-c03a-4b1a-97f7-7f2b76c15886" />
