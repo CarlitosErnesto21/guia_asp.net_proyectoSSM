@@ -1,6 +1,6 @@
 # Esta guía es para solucionar el problema de Merging.
 
-## 1. Al momento de actualizar el proyecto sino permite, se debe realizar lo siguiente:
+## Al momento de actualizar el proyecto sino permite, se debe realizar lo siguiente:
 **Comando de GitBash para Actualizar.**
 ```
 git pull
@@ -10,20 +10,20 @@ git pull
 ## - Si el problema persiste, despues de hacer git pull
 **Hacer lo siguiente:**
 
-## 2. Comprobar el estado del repositorio local:
+## 1. Comprobar el estado del repositorio local:
 Por si hay archivos, es necesario agregar a staging
 ```
 git status
 ```
-## 3. Agregar a Staging:
+## 2. Agregar a Staging:
 ```
 git add .
 ```
-## 4. Hacer un commit:
+## 3. Hacer un commit:
 ```
 git commit -m "Corrigiendo errores"
 ```
-## 5. Ahora si se puede actualizar el repositorio con:
+## 4. Ahora si se puede actualizar el repositorio con:
 ```
 git pull
 ```
@@ -43,7 +43,7 @@ git pull
 
 <img width="763" height="48" alt="image" src="https://github.com/user-attachments/assets/8c2d80c9-8c87-4e64-a0e3-02f1057b96b3" />
 
-# A continuación realizar el paso 3, 4 y 5.
+# A continuación realizar el paso 2, 3 y 4.
 ```
 git add .
 git commit -m "Corrigiendo errores"
