@@ -20,7 +20,7 @@ using System.Globalization;
 <input asp-for="Precio" class="form-control" />
 ```
 
-**Por esta línea**
+**Por esta línea:**
 ```
 <input asp-for="Precio" class="form-control" type="number" step="0.01" min="0" />
 ```
