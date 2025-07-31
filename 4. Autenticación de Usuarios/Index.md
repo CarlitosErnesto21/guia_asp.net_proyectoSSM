@@ -214,7 +214,7 @@ namespace migajas_amor.app.Controllers
         <div class="login-card">
             <div class="login-illustration">
                 <!-- Puedes reemplazar la imagen por una propia -->
-                <img src="#" alt="Bakery Illustration" class="img-fluid">
+                <img src="@Url.Content("~/Images/logo.png")" alt="Bakery Illustration" class="img-fluid">
             </div>
             <div class="login-form-section">
                 <h2>Migajas de Amor</h2>
@@ -241,10 +241,4 @@ namespace migajas_amor.app.Controllers
 </body>
 </html>
 ```
-
-
-
-
-
-
-
+## 3. Configurar en Program.cs
