@@ -1,7 +1,7 @@
 # Esta configuración es para definir una estructura para la columna Precio de la tabla Productos.
 
 ## 1.	Asegurarse de que la cultura de la aplicación coincida con la de tus usuarios.
-**Agregar este fragmento de código abajo de esta línea de código:** **_var builder = WebApplication.CreateBuilder(args);_**
+**Agregar este fragmento de código abajo de esta línea:** **_var builder = WebApplication.CreateBuilder(args);_**
 ```
 //Esto es para establecer la cultura por defecto de la aplicación
 var cultureInfo = new CultureInfo("es-ES");
