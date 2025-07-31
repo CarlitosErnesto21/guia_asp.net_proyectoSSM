@@ -29,13 +29,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Proveedores" asp-action="Index">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Acceso" asp-action="ListUsuarioRol">Usuarios</a>
+                        </li>
                     </ul>
 
+                    <!--Cerrar Sesión-->
                     <ul class="navbar-nav ms-auto d-flex align-items-center">
                         <li class="nav-item">
                             <a class="btn btn-danger" asp-area="" asp-controller="Acceso" asp-action="Salir">Cerrar Sesión</a>
                         </li>
                     </ul>
+                    <!--Cerrar Sesión-->
 
                 </div>
             </div>
