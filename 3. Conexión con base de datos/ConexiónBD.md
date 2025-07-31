@@ -44,3 +44,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using migajas_amor.app.Models;
 ```
+# Adicional.
+Se creó una carpeta **Images** a nivel del **wwwroot** para almacenar el logo del proyecto.
+
+<img width="213" height="110" alt="image" src="https://github.com/user-attachments/assets/d4f46296-84c2-48e7-a110-63d4a2036662" />
+
