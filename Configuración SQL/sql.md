@@ -49,3 +49,10 @@ insert into roles(Nombre) values('Administrador');
 ```
 insert into roles(Nombre) values('Empleado');
 ```
+## 6. Definiendo a cada usuario un rol.
+Al usuario número uno, se le asigna el rol de Administrado (rol 1.)
+```
+INSERT INTO RolesAsignados (UsuarioId, RolId) VALUES (1, 1);
+```
+```
+```
