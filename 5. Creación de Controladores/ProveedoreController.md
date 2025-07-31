@@ -166,7 +166,7 @@ namespace migajas_amor.app.Controllers
 De esta forma ya se logra el control de CRUD de productos.
 ```
 <li class="nav-item">
-    <a class="nav-link text-dark" asp-area="" asp-controller="Proveedores" asp-action="Index">Productos</a>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Proveedores" asp-action="Index">Proveedores</a>
 </li>
 ```
 
