@@ -118,3 +118,9 @@ INSERT INTO pedidos (cliente, producto, cantidad, estado, direccion_entrega, tel
 ('Javier Ruiz', 'Tacos de Carnitas', 4, 'cancelado', 'Boulevard Verde 77', '555-9876', 'Pedido cancelado por el cliente'),
 ('Sofía Torres', 'Sushi de Salmón', 2, 'pendiente', 'Callejón Azul 9', '555-6543', 'Agregar salsa de soya extra');
 ```
+
+# Actualizar el contexto del proyecto con relación a la base de datos.
+
+```
+Scaffold-DbContext "Server=localhost;Database=migajas_amor;User=root;" MySql.EntityFrameworkCore -OutputDir Models -Force
+```
