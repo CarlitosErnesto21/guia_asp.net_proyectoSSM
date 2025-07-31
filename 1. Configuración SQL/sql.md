@@ -86,3 +86,12 @@ CREATE TABLE proveedores (
     direccion VARCHAR(255)
 );
 ```
+## 9. Insertando registros a la tabla Proveedores.
+```
+INSERT INTO proveedores (nombre, telefono, email, direccion) VALUES
+('Panadería San Juan',      '12345678', 'contacto@sanjuan.com',     'Av. Central 123, Ciudad'),
+('Distribuidora La Espiga', '87654321', 'ventas@laespiga.com',      'Calle 5 #456, Ciudad'),
+('Harinas Selectas',        '23456789', 'info@harinasselectas.com', 'Ruta 2 Km 10, Ciudad'),
+('Huevos El Buen Gallo',    '34567890', 'hola@elbuenpollo.com',     'Barrio Norte #321, Ciudad'),
+('Lácteos El Rancho',       '45678901', 'contacto@elrancho.com',    'Carretera Vieja 22, Ciudad');
+```
