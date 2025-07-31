@@ -162,5 +162,11 @@ namespace migajas_amor.app.Controllers
     }
 }
 ```
-
+## 2. Agregar un nav-link, en el _Layout.cshtml:
+De esta forma ya se logra el control de CRUD de productos.
+```
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Proveedores" asp-action="Index">Productos</a>
+</li>
+```
 
