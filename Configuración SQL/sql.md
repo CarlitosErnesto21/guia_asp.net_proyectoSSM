@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS RolesAsignados (
 ## 4. Insertando usuarios a la tabla Usuarios.
 Realizar los cambios correspondientes.
 La contraseña debe ser con el algoritmo de hash criptográfico **SHA-256**.
+Lo cual se puede hacer a través de **Notepadd++**
 ```
 insert into Usuarios(Login,Password) values('usuario','contraseña');
 ```
