@@ -8,7 +8,19 @@ var cultureInfo = new CultureInfo("es-ES");
 CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
 CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 ```
-**Verificar la importación:**
+## 2. Verificar la importación:**
 ```
 using System.Globalization;
+```
+## 3. Hacer cambios en el input de precio.
+**Ubicarse en la vista Create.cshtml de Productos.**
+
+**Cambiar esta línea de código:**
+```
+<input asp-for="Precio" class="form-control" />
+```
+
+**Por esta línea**
+```
+<input asp-for="Precio" class="form-control" type="number" step="0.01" min="0" />
 ```
