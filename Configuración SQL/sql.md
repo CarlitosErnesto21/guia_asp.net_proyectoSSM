@@ -30,6 +30,14 @@ CREATE TABLE IF NOT EXISTS RolesAsignados (
     FOREIGN KEY (UsuarioId) REFERENCES Usuarios(Id),
     FOREIGN KEY (RolId) REFERENCES Roles(Id)
 );
+CREATE TABLE productos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 ```
 ## 4. Insertando usuarios a la tabla Usuarios.
 Realizar los cambios correspondientes.
@@ -54,4 +62,14 @@ Al usuario número uno, se le asigna el rol de Administrado (rol 1.)
 Se debe realizar el mismo proceso para agregar a otros usuario o incluso el mismo otro rol diferente.
 ```
 INSERT INTO RolesAsignados (UsuarioId, RolId) VALUES (1, 1);
+```
+## 7. Insertando registros a la tabla Productos.
+```
+INSERT INTO productos (nombre, descripcion, precio, stock)
+VALUES
+('Pan francés', 'Panecillo clásico de corteza crujiente y miga suave.', 1.50, 50),
+('Baguette', 'Barra de pan largo y delgado, tradicional francesa.', 2.00, 30),
+('Pan dulce', 'Pan suave y esponjoso con cubierta de azúcar.', 1.80, 40),
+('Concha', 'Pan dulce mexicano con cobertura de vainilla.', 2.20, 25),
+('Croissant', 'Pan hojaldrado de mantequilla, típico francés.', 2.50, 20);
 ```
