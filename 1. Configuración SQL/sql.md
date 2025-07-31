@@ -55,7 +55,7 @@ Se debe realizar el mismo proceso para agregar a otros usuario o incluso el mism
 ```
 INSERT INTO RolesAsignados (UsuarioId, RolId) VALUES (1, 1);
 ```
-## 7. Se creó una nueva tabla Productos.**
+## 7. Se creó una nueva tabla Productos.
 ```
 CREATE TABLE productos (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -75,4 +75,14 @@ VALUES
 ('Pan dulce', 'Pan suave y esponjoso con cubierta de azúcar.', 1.80, 40),
 ('Concha', 'Pan dulce mexicano con cobertura de vainilla.', 2.20, 25),
 ('Croissant', 'Pan hojaldrado de mantequilla, típico francés.', 2.50, 20);
+```
+## 9. Se creó un nueva tabla Proveedores.
+```
+CREATE TABLE proveedores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    telefono VARCHAR(8),
+    email VARCHAR(150),
+    direccion VARCHAR(255)
+);
 ```
