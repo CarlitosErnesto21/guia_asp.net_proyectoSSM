@@ -95,3 +95,27 @@ INSERT INTO proveedores (nombre, telefono, email, direccion) VALUES
 ('Huevos El Buen Gallo',    '34567890', 'hola@elbuenpollo.com',     'Barrio Norte #321, Ciudad'),
 ('Lácteos El Rancho',       '45678901', 'contacto@elrancho.com',    'Carretera Vieja 22, Ciudad');
 ```
+## 10. Se creó la tabla Pedidos:
+```
+CREATE TABLE pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente VARCHAR(100) NOT NULL,
+    producto VARCHAR(100) NOT NULL,
+    cantidad INT NOT NULL,
+    fecha_pedido DATE NOT NULL,
+    hora_pedido TIME NOT NULL,
+    estado ENUM('pendiente', 'en preparación', 'entregado', 'cancelado') DEFAULT 'pendiente',
+    direccion_entrega VARCHAR(255),
+    telefono VARCHAR(20),
+    observaciones TEXT
+);
+```
+## 11. Insertando registros a la tabla Pedidos:
+```
+INSERT INTO pedidos (cliente, producto, cantidad, fecha_pedido, hora_pedido, estado, direccion_entrega, telefono, observaciones) VALUES
+('Juan Pérez', 'Pizza Margarita', 2, '2025-07-31', '12:30:00', 'pendiente', 'Calle Falsa 123', '555-1234', 'Sin cebolla'),
+('Ana Gómez', 'Hamburguesa Clásica', 1, '2025-07-31', '13:10:00', 'en preparación', 'Av. Libertad 456', '555-5678', ''),
+('Luis Ramírez', 'Ensalada César', 3, '2025-07-30', '19:45:00', 'entregado', 'Calle Principal 789', '555-8765', 'Agregar aderezo extra'),
+('Marta López', 'Sushi variado', 2, '2025-07-29', '20:15:00', 'cancelado', 'Boulevard Central 234', '555-4321', 'Sin wasabi'),
+('Carlos Torres', 'Tacos al Pastor', 4, '2025-07-31', '14:00:00', 'pendiente', 'Callejón del Sol 56', '555-1111', 'Entrega rápida');
+```
