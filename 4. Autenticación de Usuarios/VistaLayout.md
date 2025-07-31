@@ -1,3 +1,4 @@
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +29,11 @@
                         </li>
                     </ul>
 
-                    <!--Cerrar Sesión-->
                     <ul class="navbar-nav ms-auto d-flex align-items-center">
                         <li class="nav-item">
                             <a class="btn btn-danger" asp-area="" asp-controller="Acceso" asp-action="Salir">Cerrar Sesión</a>
                         </li>
                     </ul>
-                    <!--Cerrar Sesión-->
 
                 </div>
             </div>
@@ -57,3 +56,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+```
