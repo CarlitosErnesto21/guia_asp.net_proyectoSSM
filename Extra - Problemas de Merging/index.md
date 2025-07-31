@@ -11,7 +11,6 @@ git pull
 **Hacer lo siguiente:**
 
 ## 1. Comprobar el estado del repositorio local:
-Por si hay archivos, es necesario agregar a staging
 ```
 git status
 ```
