@@ -1,6 +1,6 @@
 # A continuación se muestra la construcción de la autenticación para el proyecto.
 
-## 1. Crear el controlado "AccesoController.cs" en la carpeta "Controllers".
+## 1. Crear el controlador vacío "AccesoController.cs" en la carpeta "Controllers".
 Debe tener la siguiente estructura:
 ```
 using Microsoft.AspNetCore.Authentication;
@@ -81,3 +81,4 @@ namespace migajas_amor.app.Controllers
     }
 }
 ```
+## 2. 
