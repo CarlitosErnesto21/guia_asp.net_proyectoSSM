@@ -41,3 +41,10 @@ insert into Usuarios(Login,Password) values('usuario','contraseña');
 **Ejemplo:**
 
 <img width="620" height="431" alt="image" src="https://github.com/user-attachments/assets/f88ecbbb-2535-44ba-8410-83ecab5617de" />
+## 5. Insertando roles a la tabla Roles.
+```
+insert into roles(Nombre) values('Administrador');
+```
+```
+insert into roles(Nombre) values('Empleado');
+```
