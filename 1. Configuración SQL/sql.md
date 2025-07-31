@@ -30,6 +30,10 @@ CREATE TABLE IF NOT EXISTS RolesAsignados (
     FOREIGN KEY (UsuarioId) REFERENCES Usuarios(Id),
     FOREIGN KEY (RolId) REFERENCES Roles(Id)
 );
+```
+
+**Esta tabla se creó después**
+```
 CREATE TABLE productos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
