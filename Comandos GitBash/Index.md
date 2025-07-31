@@ -12,7 +12,7 @@ git commit -m "AgregarTexto"
 ```
 git push -u origin main
 ```
-## Actulizar repositorio local con los datos del repositorio remoto:
+## Actualizar repositorio local con los datos del repositorio remoto:
 ```
 git pull
 ```
