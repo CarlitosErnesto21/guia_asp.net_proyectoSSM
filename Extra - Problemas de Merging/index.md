@@ -7,9 +7,8 @@ git pull
 ```
 
 ## - Verificar que el proyecto de ASP.NET (aplicación de VisualStudio2022) esté cerrada.
-## - Si el problema persiste, despues de hacer:
-
-git pull
+## - Si el problema persiste, despues de hacer git pull
+**Hacer lo siguiente:**
 
 ## 2. Comprobar el estado del repositorio local:
 Por si hay archivos, es necesario agregar a staging
