@@ -12,6 +12,10 @@ git commit -m "AgregarTexto"
 ```
 git push -u origin main
 ```
+## Hacer una actualización del repositorio remoto con un branch:
+```
+git push -u origin NombreBranch
+```
 ## Actualizar repositorio local con los datos del repositorio remoto:
 ```
 git pull
