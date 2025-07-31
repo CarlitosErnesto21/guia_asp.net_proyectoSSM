@@ -241,4 +241,66 @@ namespace migajas_amor.app.Controllers
 </body>
 </html>
 ```
-## 3. Configurar en Program.cs
+## 3. Configurar en Program.cs.
+**Agregar este fragmento de código:**
+```
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(option =>
+    {
+        option.LoginPath = "/Acceso/Index";
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        option.AccessDeniedPath = "/Home/Privacy";
+    });
+```
+**Debe estar abajo de:** (ESTE CÓDIGO YA ESTÁ EN EL ARCHIVO)
+```
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+// Obtiene la cadena de conexión y lanza una excepción si es nula
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException("Connetion string 'DbContext'" + " not found. ");
+
+builder.Services.AddDbContext<MigajasAmorContext>(o =>
+{
+    o.UseMySQL(connectionString);
+});
+```
+## 4. Agregar esta línea de código abajo de: "app.UseRouting();".
+```
+app.UseAuthentication();
+```
+## 5. Cambiar en este fragmento de código el controlador "Home" por "Acceso".
+**Código anterior:**
+```
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}")
+    .WithStaticAssets();
+```
+**Código actualizado:**
+```
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Acceso}/{action=Index}/{id?}")
+    .WithStaticAssets();
+```
+## 6. Gracias a esta función "Salir();" en el controlador "AccesoController" se logra la funcionalidad del botón "Cerrar Sesión" configurado en la vista "_Layout.cshtml"
+**Función del controlador:**
+```
+public async Task<IActionResult> Salir()
+{
+    await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+    return RedirectToAction("Index", "Acceso");
+}
+```
+**Botón agregado para cerrar sesión:**
+```
+<!--Cerrar Sesión-->
+    <ul class="navbar-nav ms-auto d-flex align-items-center">
+        <li class="nav-item">
+            <a class="btn btn-danger" asp-area="" asp-controller="Acceso" asp-action="Salir">Cerrar Sesión</a>
+        </li>
+    </ul>
+<!--Cerrar Sesión-->
+```
