@@ -24,3 +24,10 @@ using System.Globalization;
 ```
 <input asp-for="Precio" class="form-control" type="number" step="0.01" min="0" />
 ```
+## 4. Agregar la validación al programa para que solo permita valores entre un rango específico.
+Rango: 0.01 y 9999.99
+**Hacer el cambio en la clase de "Producto.cs" dentro de la carpeta "Models"**
+```
+[Range(0.01, 9999.99)] //línea agregada
+public decimal Precio { get; set; }
+```
