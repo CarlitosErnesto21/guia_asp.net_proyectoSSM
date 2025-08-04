@@ -151,6 +151,68 @@ VALUES
 ('Ana', 'López', '34567890', 'ana.lopez@email.com', 'Calle 4 #321, Ciudad'),
 ('Carlos', 'Fernández', '45678901', 'carlos.fernandez@email.com', 'Avenida 5 #654, Ciudad');
 ```
+## 14. Se creó la tabla Detalle_Pedidos.
+```
+CREATE TABLE detalle_pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pedido_id INT NOT NULL,
+    producto_id INT NOT NULL,
+    cantidad INT,
+    total DECIMAL(10,2),
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+    FOREIGN KEY (producto_id) REFERENCES productos(id)
+);
+```
+## 15. Insertando registros a la tabla Detalle_Pedidos.
+```
+INSERT INTO detalle_pedidos (pedido_id, producto_id, cantidad, total) VALUES
+-- Pedido 1 tiene 2 productos
+(1, 1, 1, 1.50),         -- Pan francés (1 x $1.50)
+(1, 3, 1, 1.80),         -- Pan dulce (1 x $1.80)
+
+-- Pedido 2 tiene 1 producto
+(2, 2, 1, 2.00),         -- Baguette (1 x $2.00)
+
+-- Pedido 3 tiene 2 productos
+(3, 4, 2, 4.40),         -- Concha (2 x $2.20)
+(3, 5, 1, 2.50),         -- Croissant (1 x $2.50)
+
+-- Pedido 4 tiene 1 producto
+(4, 1, 1, 1.50),         -- Pan francés (1 x $1.50)
+
+-- Pedido 5 tiene 1 producto
+(5, 3, 3, 5.40),         -- Pan dulce (3 x $1.80)
+
+-- Pedido 6 tiene 2 productos
+(6, 2, 2, 4.00),         -- Baguette (2 x $2.00)
+(6, 4, 1, 2.20),         -- Concha (1 x $2.20)
+
+-- Pedido 7 tiene 1 producto
+(7, 5, 2, 5.00),         -- Croissant (2 x $2.50)
+
+-- Pedido 8 tiene 1 producto
+(8, 1, 2, 3.00),         -- Pan francés (2 x $1.50)
+
+-- Pedido 9 tiene 2 productos
+(9, 3, 1, 1.80),         -- Pan dulce (1 x $1.80)
+(9, 4, 1, 2.20),         -- Concha (1 x $2.20)
+
+-- Pedido 10 tiene 1 producto
+(10, 2, 5, 10.00),       -- Baguette (5 x $2.00)
+
+-- Pedido 11 tiene 1 producto
+(11, 5, 1, 2.50),        -- Croissant (1 x $2.50)
+
+-- Pedido 12 tiene 1 producto
+(12, 1, 2, 3.00),        -- Pan francés (2 x $1.50)
+
+-- Pedido 13 tiene 1 producto
+(13, 3, 2, 3.60),        -- Pan dulce (2 x $1.80)
+
+-- Pedido 14 tiene 2 productos
+(14, 4, 2, 4.40),        -- Concha (2 x $2.20)
+(14, 2, 1, 2.00);        -- Baguette (1 x $2.00)
+```
 
 # Actualizar el contexto del proyecto con relación a la base de datos.
 
