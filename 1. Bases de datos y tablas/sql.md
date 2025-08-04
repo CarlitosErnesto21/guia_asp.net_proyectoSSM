@@ -118,6 +118,28 @@ INSERT INTO pedidos (cliente, producto, cantidad, estado, direccion_entrega, tel
 ('Javier Ruiz', 'Tacos de Carnitas', 4, 'cancelado', 'Boulevard Verde 77', '555-9876', 'Pedido cancelado por el cliente'),
 ('Sofía Torres', 'Sushi de Salmón', 2, 'pendiente', 'Callejón Azul 9', '555-6543', 'Agregar salsa de soya extra');
 ```
+## 12. Se creo la tabla Clientes.
+```
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50),
+    telefono VARCHAR(8),
+    email VARCHAR(150),
+    direccion VARCHAR(255),
+    fecha_registro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+```
+## 13. Insertando registros a la tabla Clientes.
+```
+INSERT INTO clientes (nombre, apellido, telefono, email, direccion)
+VALUES
+('Juan', 'Pérez', '12345678', 'juan.perez@email.com', 'Calle 1 #123, Ciudad'),
+('María', 'García', '87654321', 'maria.garcia@email.com', 'Avenida 2 #456, Ciudad'),
+('Luis', 'Ramírez', '23456789', 'luis.ramirez@email.com', 'Boulevard 3 #789, Ciudad'),
+('Ana', 'López', '34567890', 'ana.lopez@email.com', 'Calle 4 #321, Ciudad'),
+('Carlos', 'Fernández', '45678901', 'carlos.fernandez@email.com', 'Avenida 5 #654, Ciudad');
+```
 
 # Actualizar el contexto del proyecto con relación a la base de datos.
 
