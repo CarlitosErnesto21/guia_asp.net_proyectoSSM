@@ -72,3 +72,36 @@
      return View(clientes);
  }
 ```
+
+## 2. En la carpeta "Views/Shared/_CuadroBusqueda.cshtml", se crea el archivo para contener, la vista correspondiente al parámetro de búsqueda.
+
+<img width="346" height="170" alt="image" src="https://github.com/user-attachments/assets/79edfdb1-d700-4c07-82bc-58c95632be5d" />
+
+**Código de la vista:**
+
+```
+@model string
+
+<form method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="search" class="form-control" placeholder="Buscar..." value="@Model" />
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+</form>
+```
+
+## 3. Código para implementar en las vistas que se desea agregar el parámetro de búsqueda.
+
+**Se crea la variable, que contendra el parámetro de búsqueda:**
+
+```
+var search = Context.Request.Query["search"].ToString();
+```
+
+**Se agrega en la misma vista, el input que se va a visualizar (esto es correspondiente a la vista _CuadroBusqueda.cshtml):**
+
+```
+@await Html.PartialAsync("_CuadroBusqueda", search)
+```
+
+# ¡Listo!, el parámetro de búsqueda ya está implementado...
