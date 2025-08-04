@@ -104,4 +104,7 @@ var search = Context.Request.Query["search"].ToString();
 @await Html.PartialAsync("_CuadroBusqueda", search)
 ```
 
+<img width="959" height="326" alt="image" src="https://github.com/user-attachments/assets/2f25e6d5-f609-477d-972d-756ed4c0b903" />
+
+
 # ¡Listo!, el parámetro de búsqueda ya está implementado...
