@@ -99,24 +99,35 @@ INSERT INTO proveedores (nombre, telefono, email, direccion) VALUES
 ```
 CREATE TABLE pedidos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    cliente VARCHAR(100) NOT NULL,
-    producto VARCHAR(100) NOT NULL,
-    cantidad INT NOT NULL,
+    cliente_id INT,
+    cantidad INT,
     fecha_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    estado ENUM('pendiente', 'en preparación', 'entregado', 'cancelado') DEFAULT 'pendiente',
+    estado ENUM('pendiente','en preparación','entregado','cancelado') DEFAULT 'pendiente',
     direccion_entrega VARCHAR(255),
     telefono VARCHAR(20),
-    comentarios VARCHAR(255)
+    comentarios VARCHAR(255),
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
 );
 ```
 ## 11. Insertando registros a la tabla Pedidos.
 ```
-INSERT INTO pedidos (cliente, producto, cantidad, estado, direccion_entrega, telefono, comentarios) VALUES
-('María Vargas', 'Pizza Pepperoni', 2, 'pendiente', 'Calle Luna 45', '555-2345', 'Entregar sin picante'),
-('Pedro Sánchez', 'Ensalada Griega', 1, 'en preparación', 'Av. del Sol 101', '555-6789', ''),
-('Lucía Herrera', 'Hamburguesa Vegetariana', 3, 'entregado', 'Calle Rosas 22', '555-3456', 'Sin mayonesa'),
-('Javier Ruiz', 'Tacos de Carnitas', 4, 'cancelado', 'Boulevard Verde 77', '555-9876', 'Pedido cancelado por el cliente'),
-('Sofía Torres', 'Sushi de Salmón', 2, 'pendiente', 'Callejón Azul 9', '555-6543', 'Agregar salsa de soya extra');
+INSERT INTO pedidos (cliente_id, cantidad, estado, direccion_entrega, telefono, comentarios) VALUES
+(1, 2, 'pendiente', 'Calle 1 #123, Ciudad', '12345678', 'Pedido inicial de Juan'),
+(1, 1, 'entregado', 'Calle 1 #123, Ciudad', '12345678', 'Pedido repetido'),
+(2, 3, 'en preparación', 'Avenida 2 #456, Ciudad', '87654321', ''),
+(2, 1, 'pendiente', 'Avenida 2 #456, Ciudad', '87654321', 'Pedido express'),
+(3, 2, 'entregado', 'Boulevard 3 #789, Ciudad', '23456789', ''),
+(4, 2, 'pendiente', 'Calle 4 #321, Ciudad', '34567890', 'Cliente nuevo'),
+(5, 1, 'pendiente', 'Avenida 5 #654, Ciudad', '45678901', ''),
+(6, 4, 'entregado', 'Calle 11 #321, Ciudad', '19283746', 'Pedido por cumpleaños'),
+(7, 3, 'pendiente', 'Avenida 12 #654, Ciudad', '28374619', ''),
+(8, 2, 'en preparación', 'Boulevard 13 #987, Ciudad', '37461928', ''),
+(9, 2, 'pendiente', 'Calle 14 #432, Ciudad', '46192837', 'Pedido familiar'),
+(10, 5, 'pendiente', 'Avenida 15 #765, Ciudad', '56192837', ''),
+(11, 2, 'entregado', 'Calle 16 #210, Ciudad', '61928374', ''),
+(12, 1, 'pendiente', 'Calle 17 #543, Ciudad', '72837461', 'Pedido único'),
+(13, 3, 'en preparación', 'Calle 18 #876, Ciudad', '81928374', ''),
+(14, 2, 'cancelado', 'Boulevard 19 #654, Ciudad', '91827364', 'Cancelado por cliente');
 ```
 ## 12. Se creo la tabla Clientes.
 ```
