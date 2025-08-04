@@ -49,3 +49,11 @@ git merge NombreBranch
 ```
 git branch -D NombreBranch
 ```
+
+# USAR CON PRECAUCIÓN.
+## Este comando elimina las modificaciones hechas en nuestro repositorio local y lo actualiza con base al repositorio remoto, sobreescribiendo y evitando problemas de merging. 
+
+## NO ES SEGURO, ya que elimina todos los cambios que no se hayan guardado.
+```
+git reset --hard HEAD
+```
