@@ -27,3 +27,10 @@ QuestPDF.Settings.License = LicenseType.Community;
 
 <img width="816" height="814" alt="image" src="https://github.com/user-attachments/assets/319cacac-3d7d-4e09-8ea2-e8b5d8a30bfa" />
 
+## 4. Es indispensble, actualizar el contexto de la base de datos, para traer las tablas que se han creado recientemente y evitar errores futuros.
+
+```
+Scaffold-DbContext "Server=localhost;Database=migajas_amor;User=root;" MySql.EntityFrameworkCore -OutputDir Models -Force
+```
+
+## 5. 
