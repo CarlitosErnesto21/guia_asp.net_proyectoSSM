@@ -182,7 +182,7 @@ public IResult DetallePedidosPdf(int n)
 }
 ```
 
-## 12. Agregar la importación de QuestPDF:
+## 12. Agregar la importación de QuestPDF al mismo controlador:
 
 ```
 using QuestPDF.Fluent;
