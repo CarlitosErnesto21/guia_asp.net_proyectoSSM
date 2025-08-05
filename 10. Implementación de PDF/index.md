@@ -149,6 +149,8 @@ namespace migajas_amor.app.Pdf
 
 Se puede ejecutar en la base de datos para comprobar la tabla que se mostraría en el pdf.
 
+**Se quitó el campo "apellidos" para evitar problemas en la presentación del documento PDF.**
+
 ```
 SELECT p.fecha_pedido, c.nombre, c.email, p.estado, pr.nombre AS producto, pr.precio AS precio_unitario, dp.cantidad, dp.total FROM pedidos p JOIN clientes c ON p.cliente_id = c.id JOIN detalle_pedidos dp ON p.id = dp.pedido_id JOIN productos pr ON dp.producto_id = pr.id ORDER BY p.fecha_pedido DESC;
 ```
