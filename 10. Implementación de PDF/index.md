@@ -57,10 +57,6 @@ modelBuilder.Entity<DetallePedidoPdf>(entity =>
         .HasMaxLength(50)
         .HasColumnName("nombre");
 
-    entity.Property(e => e.Apellido)
-        .HasMaxLength(50)
-        .HasColumnName("apellido");
-
     entity.Property(e => e.Email)
         .HasMaxLength(150)
         .HasColumnName("email");
@@ -107,7 +103,6 @@ namespace migajas_amor.app.Pdf
     {
         public DateTime FechaPedido { get; set; }
         public string? Nombre { get; set; }
-        public string? Apellido { get; set; }
         public string? Email { get; set; }
         public string? Estado { get; set; }
         public string? Producto { get; set; }
@@ -155,7 +150,7 @@ namespace migajas_amor.app.Pdf
 Se puede ejecutar en la base de datos para comprobar la tabla que se mostraría en el pdf.
 
 ```
-SELECT p.fecha_pedido, c.nombre, c.apellido, c.email, p.estado, pr.nombre AS producto, pr.precio AS precio_unitario, dp.cantidad, dp.total FROM pedidos p JOIN clientes c ON p.cliente_id = c.id JOIN detalle_pedidos dp ON p.id = dp.pedido_id JOIN productos pr ON dp.producto_id = pr.id ORDER BY p.fecha_pedido ASC;
+SELECT p.fecha_pedido, c.nombre, c.email, p.estado, pr.nombre AS producto, pr.precio AS precio_unitario, dp.cantidad, dp.total FROM pedidos p JOIN clientes c ON p.cliente_id = c.id JOIN detalle_pedidos dp ON p.id = dp.pedido_id JOIN productos pr ON dp.producto_id = pr.id ORDER BY p.fecha_pedido DESC;
 ```
 
 
@@ -172,7 +167,7 @@ SELECT p.fecha_pedido, c.nombre, c.apellido, c.email, p.estado, pr.nombre AS pro
 [HttpGet(Name = "DetallePedidosPdf")]
 public IResult DetallePedidosPdf(int n)
 {
-    string sql = "SELECT p.fecha_pedido, c.nombre, c.apellido, c.email, p.estado, pr.nombre AS producto, pr.precio AS precio_unitario, dp.cantidad, dp.total FROM pedidos p JOIN clientes c ON p.cliente_id = c.id JOIN detalle_pedidos dp ON p.id = dp.pedido_id JOIN productos pr ON dp.producto_id = pr.id ORDER BY p.fecha_pedido ASC;";
+    string sql = "SELECT p.fecha_pedido, c.nombre, c.email, p.estado, pr.nombre AS producto, pr.precio AS precio_unitario, dp.cantidad, dp.total FROM pedidos p JOIN clientes c ON p.cliente_id = c.id JOIN detalle_pedidos dp ON p.id = dp.pedido_id JOIN productos pr ON dp.producto_id = pr.id ORDER BY p.fecha_pedido DESC;";
     List<DetallePedidoPdf> data = _context.PedidosPdf
         .FromSqlRaw(sql)
         .ToList();
