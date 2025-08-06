@@ -15,7 +15,7 @@ SELECT
     c.email,
     p.estado,
     pr.nombre AS producto,
-	pr.precio AS precio_unitario,
+    pr.precio AS precio_unitario,
     dp.cantidad,
     dp.total
 FROM pedidos p
