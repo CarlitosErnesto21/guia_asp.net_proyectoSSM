@@ -12,7 +12,6 @@
 SELECT
 	p.fecha_pedido,
     c.nombre,
-    c.apellido,
     c.email,
     p.estado,
     pr.nombre AS producto,
@@ -33,7 +32,6 @@ Estado: **WHERE p.estado = 'pendiente'**, lo que significa que entre las '' pued
 SELECT
     p.fecha_pedido,
     c.nombre,
-    c.apellido,
     c.email,
     p.estado,
     pr.nombre AS producto,
