@@ -151,6 +151,23 @@ VALUES
 ('Ana', 'López', '34567890', 'ana.lopez@email.com', 'Calle 4 #321, Ciudad'),
 ('Carlos', 'Fernández', '45678901', 'carlos.fernandez@email.com', 'Avenida 5 #654, Ciudad');
 ```
+
+**Insertando nuevos registros a la tabla clientes:**
+
+```
+INSERT INTO clientes (nombre, apellido, telefono, email, direccion) VALUES
+('Fernando', 'Santos', '19283746', 'fernando.santos@email.com', 'Calle 11 #321, Ciudad'),
+('Isabel', 'Muñoz', '28374619', 'isabel.munoz@email.com', 'Avenida 12 #654, Ciudad'),
+('Ricardo', 'Vega', '37461928', 'ricardo.vega@email.com', 'Boulevard 13 #987, Ciudad'),
+('Patricia', 'Herrera', '46192837', 'patricia.herrera@email.com', 'Calle 14 #432, Ciudad'),
+('Javier', 'Navarro', '56192837', 'javier.navarro@email.com', 'Avenida 15 #765, Ciudad'),
+('Andrea', 'Castillo', '61928374', 'andrea.castillo@email.com', 'Boulevard 16 #210, Ciudad'),
+('Roberto', 'Silva', '72837461', 'roberto.silva@email.com', 'Calle 17 #543, Ciudad'),
+('Carmen', 'Delgado', '81928374', 'carmen.delgado@email.com', 'Avenida 18 #876, Ciudad'),
+('Gustavo', 'Ríos', '91827364', 'gustavo.rios@email.com', 'Boulevard 19 #654, Ciudad'),
+('Paula', 'Mendoza', '10293847', 'paula.mendoza@email.com', 'Calle 20 #789, Ciudad');
+```
+
 ## 14. Se creó la tabla Detalle_Pedidos.
 ```
 CREATE TABLE detalle_pedidos (
