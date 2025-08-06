@@ -118,7 +118,7 @@ namespace migajas_amor.app.Pdf
 <img width="295" height="82" alt="image" src="https://github.com/user-attachments/assets/56b4dffd-972d-46b5-86e7-5340407beaa2" />
 
 
-**Estrucutra base que debe contener la clase:**
+**Estructura base que debe contener la clase:**
 
 ```
 using QuestPDF.Infrastructure;
