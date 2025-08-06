@@ -27,7 +27,7 @@ ORDER BY p.fecha_pedido ASC;
 ```
 # Esta otra consulta, contiene la misma información, con la diferencia que, muestra el estado específico de los registros.
 
-Estado: **WHERE p.estado = 'pendiente'**
+Estado: **WHERE p.estado = 'pendiente'**, lo que significa que entre las '' puede llevar otro estado como: 'cancelado', 'en preparacion' o 'entregado'
 
 ```
 SELECT
