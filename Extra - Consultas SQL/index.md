@@ -22,7 +22,7 @@ FROM pedidos p
 JOIN clientes c ON p.cliente_id = c.id
 JOIN detalle_pedidos dp ON p.id = dp.pedido_id
 JOIN productos pr ON dp.producto_id = pr.id
-ORDER BY p.fecha_pedido ASC;
+ORDER BY p.fecha_pedido DESC;
 ```
 # Esta otra consulta, contiene la misma información, con la diferencia que, muestra el estado específico de los registros.
 
@@ -43,5 +43,5 @@ JOIN clientes c ON p.cliente_id = c.id
 JOIN detalle_pedidos dp ON p.id = dp.pedido_id
 JOIN productos pr ON dp.producto_id = pr.id
 WHERE p.estado = 'pendiente'
-ORDER BY p.fecha_pedido ASC;
+	ORDER BY p.fecha_pedido DESC;
 ```
