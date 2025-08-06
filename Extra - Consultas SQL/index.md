@@ -10,7 +10,7 @@
 
 ```
 SELECT
-	p.fecha_pedido,
+    p.fecha_pedido,
     c.nombre,
     c.email,
     p.estado,
